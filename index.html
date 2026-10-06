@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ka1o — Full-stack Web Developer in Tokyo</title>
+  <meta name="description" content="ka1o is a full-stack web developer based in Tokyo, building web apps, MVPs and landing pages — code that ships on time and still works a year later." />
+  <meta name="theme-color" content="#0c0b0a" />
+  <link rel="canonical" href="https://chinnhouhou.com/" />
+  <meta property="og:url" content="https://chinnhouhou.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ka1o — Full-stack Web Developer in Tokyo" />
+  <meta property="og:description" content="Web apps, MVPs and landing pages. Code that ships on time and still works." />
+  <meta property="og:image" content="https://chinnhouhou.com/images/work/terra-hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23ff4b1f'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Noto+Sans+JP:wght@300..700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="is-loading">
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__top">
+      <span class="mono">ka1o</span>
+      <span class="mono">Portfolio — 2026</span>
+      <span class="mono">Tokyo, JP</span>
+    </div>
+    <div class="loader__words">
+      <span class="loader__word"><span>Build</span></span>
+      <span class="loader__word serif"><span>&amp;</span></span>
+      <span class="loader__word"><span>Ship</span></span>
+    </div>
+    <div class="loader__bottom">
+      <div class="loader__bar"><span></span></div>
+      <div class="loader__count"><span class="loader__num">000</span></div>
+    </div>
+  </div>
+
+  <div class="lang-curtain" aria-hidden="true"><span class="lang-curtain__label"></span></div>
+  <div class="toast mono" role="status" aria-live="polite"></div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label">View</span></div></div>
+  <div class="cursor__dot" aria-hidden="true"></div>
+  <div class="hover-media" aria-hidden="true"><div class="hover-media__inner"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#top" class="logo" data-magnetic aria-label="ka1o — home">
+      <span class="logo__mark"></span>
+      <span class="logo__text">ka1o<sup>©</sup></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work" class="nav__link" data-hover-text>Work</a>
+      <a href="#about" class="nav__link" data-hover-text>About</a>
+      <a href="#process" class="nav__link" data-hover-text>Process</a>
+      <a href="#contact" class="nav__link" data-hover-text>Contact</a>
+    </nav>
+    <div class="header__meta mono">
+      <span class="status"><i></i>Open for projects</span>
+      <span class="clock">TYO <b data-clock>00:00:00</b></span>
+      <button class="lang-btn" data-lang-toggle aria-label="Switch language"><span data-lang="en">EN</span><i>/</i><span data-lang="ja">日本語</span></button>
+    </div>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <nav class="menu__nav">
+      <a href="#work"><span class="mono">01</span>Work</a>
+      <a href="#about"><span class="mono">02</span>About</a>
+      <a href="#process"><span class="mono">03</span>Process</a>
+      <a href="#contact"><span class="mono">04</span>Contact</a>
+    </nav>
+    <div class="menu__foot mono">
+      <button class="lang-btn" data-lang-toggle aria-label="Switch language"><span data-lang="en">EN</span><i>/</i><span data-lang="ja">日本語</span></button>
+      <span>Tokyo, JP</span>
+    </div>
+  </div>
+
+  <!-- Case study overlay -->
+  <div class="case" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="case-title" data-lenis-prevent>
+    <div class="case__bar mono">
+      <span class="case__crumb">Work / <b class="case__crumb-name"></b></span>
+      <button class="case__close" data-magnetic>Close <i>✕</i></button>
+    </div>
+    <div class="case__scroll">
+      <div class="case__hero"><div class="case__media"><img alt="" /></div></div>
+      <div class="case__inner"></div>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" data-theme="dark">
+      <canvas class="hero__gl" aria-hidden="true"></canvas>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__grid">
+        <p class="hero__intro">
+          <span class="reveal-line"><span data-i18n="hero.l1">Full-stack web developer building</span></span>
+          <span class="reveal-line"><span data-i18n="hero.l2">web apps, MVPs and landing pages —</span></span>
+          <span class="reveal-line"><span data-i18n="hero.l3">code that ships on time and <em class="serif">still works.</em></span></span>
+        </p>
+        <div class="hero__cn" aria-hidden="true">
+          <span>陳方方</span><span class="mono">設計 · 実装 · 保守</span>
+        </div>
+        <ul class="hero__list mono">
+          <li><span>( Discipline )</span>Frontend · Backend<br>Web apps &amp; MVPs<br>Creative development</li>
+          <li><span>( Based )</span>Tokyo — 35.68°N<br>Working worldwide</li>
+        </ul>
+      </div>
+
+      <h1 class="hero__title" aria-label="ka1o, Tokyo">
+        <span class="hero__row"><span class="hero__word" data-split>ka1o</span></span>
+        <span class="hero__row hero__row--b"><span class="hero__word serif" data-split>Tokyo</span><span class="hero__badge"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">Scroll to explore ✦ Selected work 2021—2026 ✦ </textPath></text></svg><span class="hero__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 14l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span></span></span>
+      </h1>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto" data-theme="dark">
+      <div class="label mono"><span>( 01 )</span><span>Manifesto</span></div>
+      <p class="manifesto__text"></p>
+      <div class="manifesto__foot">
+        <p class="mono" data-i18n="manifesto.foot">3+ years. 40+ projects. Still obsessed with the last 5% — the loading state, the edge case, the README nobody asked for.</p>
+        <a href="#about" class="btn-round" data-magnetic><span>About me</span></a>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work" data-theme="light">
+      <div class="work__head">
+        <div class="label mono"><span>( 02 )</span><span>Selected work</span></div>
+        <h2 class="section-title"><span class="reveal-line"><span data-i18n="work.t1">Selected</span></span><span class="reveal-line"><span data-i18n="work.t2"><em class="serif">works</em> <sup class="mono">(06)</sup></span></span></h2>
+        <p class="work__lede mono" data-i18n="work.lede">A handful of projects from the last few years.</p>
+      </div>
+      <div class="projects"></div>
+    </section>
+
+    <!-- INDEX -->
+    <section class="index" data-theme="light">
+      <div class="index__head">
+        <div class="label mono"><span>( 03 )</span><span>Index</span></div>
+        <div class="index__filters mono" role="tablist"></div>
+      </div>
+      <div class="index__cols mono" aria-hidden="true"><span>Client</span><span>Project</span><span>Stack</span><span>Year</span></div>
+      <ul class="index__list"></ul>
+    </section>
+
+    <!-- ARCHIVE horizontal -->
+    <section class="archive" id="archive" data-theme="dark">
+      <div class="archive__pin">
+        <div class="archive__head">
+          <div class="label mono"><span>( 04 )</span><span>Playground</span></div>
+          <h2 class="section-title"><span class="reveal-line"><span data-i18n="archive.t1">Experiments,</span></span><span class="reveal-line"><span data-i18n="archive.t2"><em class="serif">studies</em> &amp; noise</span></span></h2>
+          <div class="archive__progress mono"><span class="archive__cur">01</span><i><b></b></i><span>08</span></div>
+        </div>
+        <div class="archive__track"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" data-theme="dark">
+      <div class="label mono"><span>( 05 )</span><span>About</span></div>
+
+      <!-- Woven lanyard + draggable ID card (ported from the proposal site) -->
+      <div class="badge-wrap" aria-hidden="true">
+        <svg class="badge-strap" aria-hidden="true">
+          <defs>
+            <pattern id="lanyardWeave" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+              <path d="M0 0V3 M1.5 0V3" stroke="#fff" stroke-opacity=".07" stroke-width=".5"/>
+              <path d="M0 0H3 M0 1.5H3" stroke="#000" stroke-opacity=".2" stroke-width=".6"/>
+            </pattern>
+          </defs>
+          <g class="strap-ribbon strap-ribbon-rear" data-ribbon="rear">
+            <path class="strap-shadow" data-part="shadow"/><path class="strap-body" data-part="body"/><path class="strap-satin" data-part="satin"/><path class="strap-weave" data-part="weave"/><path class="strap-selvedge" data-part="left"/><path class="strap-selvedge strap-selvedge-light" data-part="right"/><path class="strap-stitch" data-part="stitch"/>
+          </g>
+          <g class="strap-ribbon" data-ribbon="front">
+            <path class="strap-shadow" data-part="shadow"/><path class="strap-body" data-part="body"/><path class="strap-satin" data-part="satin"/><path class="strap-weave" data-part="weave"/><path class="strap-selvedge" data-part="left"/><path class="strap-selvedge strap-selvedge-light" data-part="right"/><path class="strap-stitch" data-part="stitch"/>
+            <path class="strap-guide" id="strapCorePath" data-part="guide"/>
+            <text class="strap-text"><textPath href="#strapCorePath" startOffset="70">KA<tspan class="strap-text-accent">—</tspan>1O</textPath></text>
+            <text class="strap-text"><textPath href="#strapCorePath" startOffset="150">KA<tspan class="strap-text-accent">—</tspan>1O</textPath></text>
+          </g>
+        </svg>
+        <div class="badge-card">
+          <span class="badge-slot"></span>
+          <span class="badge-hardware"><span class="badge-hardware-loop"></span><span class="badge-hardware-fold"></span><span class="badge-hardware-swivel"></span><span class="badge-hardware-clasp"></span></span>
+          <div class="badge-name">KA<span class="badge-dash">—</span>1O</div>
+          <div class="badge-role">Web Developer &amp; Full-Stack</div>
+          <div class="badge-mid">
+            <div class="badge-photo"><img src="/images/work/avatar.png" alt="" draggable="false" /></div>
+            <span class="badge-pixels" aria-hidden="true"></span>
+          </div>
+          <div class="badge-meta"><span>ID&nbsp;&nbsp;KA1O-2026-001</span><span>TOKYO 35.68°N 139.77°E</span><span>EST.2021 · FULL-STACK</span></div>
+          <div class="badge-foot"><span class="badge-barcode" aria-hidden="true"></span><span class="badge-code">KA1O · 2026 · 001</span></div>
+        </div>
+        <span class="badge-hint mono">Drag me ↙</span>
+      </div>
+      <div class="about__grid">
+        <figure class="about__portrait">
+          <div class="about__img"><img src="/images/work/avatar.png" alt="Portrait of ka1o" /></div>
+          <figcaption class="mono"><span>ka1o</span><span>Tokyo, 2026</span></figcaption>
+        </figure>
+        <div class="about__body">
+          <h2 class="about__title">
+            <span class="reveal-line"><span data-i18n="about.t1">A developer who</span></span>
+            <span class="reveal-line"><span data-i18n="about.t2"><em class="serif">thinks like a designer,</em></span></span>
+            <span class="reveal-line"><span data-i18n="about.t3">and ships like</span></span>
+            <span class="reveal-line"><span data-i18n="about.t4"><em class="serif">an engineer.</em></span></span>
+          </h2>
+          <div class="about__cols">
+            <p data-i18n="about.p1"></p>
+            <p data-i18n="about.p2"></p>
+          </div>
+          <dl class="stats">
+            <div><dt class="mono" data-i18n="stat.1">Years building</dt><dd><span data-count="3">0</span>+</dd></div>
+            <div><dt class="mono" data-i18n="stat.2">Projects delivered</dt><dd><span data-count="40">0</span>+</dd></div>
+            <div><dt class="mono" data-i18n="stat.3">Languages shipped</dt><dd><span data-count="2">0</span></dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="services">
+        <div class="services__head"><h3 class="mono">( Capabilities )</h3></div>
+        <ul class="services__list">
+          <li><span class="mono">01</span><h4 data-i18n="svc.1.t">Frontend</h4><p data-i18n="svc.1.d"></p></li>
+          <li><span class="mono">02</span><h4 data-i18n="svc.2.t">Backend</h4><p data-i18n="svc.2.d"></p></li>
+          <li><span class="mono">03</span><h4 data-i18n="svc.3.t">Enterprise</h4><p data-i18n="svc.3.d"></p></li>
+          <li><span class="mono">04</span><h4 data-i18n="svc.4.t">Refactoring</h4><p data-i18n="svc.4.d"></p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DELIVERABLES (exploded stack) -->
+    <section class="deliver" id="process" data-theme="blueprint">
+      <div class="deliver__pin">
+        <div class="deliver__copy">
+          <div class="label mono"><span>( 06 )</span><span>青焼き — Deliverables</span></div>
+          <h2 class="section-title deliver__title"><span class="reveal-line"><span data-i18n="deliver.t1">Handover is</span></span><span class="reveal-line"><span data-i18n="deliver.t2">the <em class="serif">deliverable.</em></span></span></h2>
+          <p class="deliver__lede" data-i18n="deliver.lede"></p>
+          <ol class="deliver__list">
+            <li data-step="0"><span class="mono">01</span><div><h4>Interface</h4><p data-i18n="deliver.1.d"></p></div></li>
+            <li data-step="1"><span class="mono">02</span><div><h4>Application</h4><p data-i18n="deliver.2.d"></p></div></li>
+            <li data-step="2"><span class="mono">03</span><div><h4>Data</h4><p data-i18n="deliver.3.d"></p></div></li>
+            <li data-step="3"><span class="mono">04</span><div><h4>Handover</h4><p data-i18n="deliver.4.d"></p></div></li>
+          </ol>
+        </div>
+        <div class="deliver__stage" aria-hidden="true">
+          <div class="stack">
+            <div class="layer layer--ui" data-step="0">
+              <span class="layer__tag mono">01 — Interface</span>
+              <div class="ui-bar"></div><div class="ui-hero"></div>
+              <div class="ui-cards"><i></i><i></i><i></i></div>
+            </div>
+            <div class="layer layer--app" data-step="1">
+              <span class="layer__tag mono">02 — Application</span>
+              <svg viewBox="0 0 400 280" preserveAspectRatio="none"><path d="M60 70 L200 140 L340 70 M200 140 L200 230 M60 210 L200 140 L340 210" /><circle cx="60" cy="70" r="9"/><circle cx="340" cy="70" r="9"/><circle cx="200" cy="140" r="14"/><circle cx="200" cy="230" r="9"/><circle cx="60" cy="210" r="9"/><circle cx="340" cy="210" r="9"/></svg>
+            </div>
+            <div class="layer layer--data" data-step="2">
+              <span class="layer__tag mono">03 — Data</span>
+              <div class="rows"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="layer layer--doc" data-step="3">
+              <span class="layer__tag mono">04 — Handover</span>
+              <span class="doc-title mono">README.md</span>
+              <div class="doc-lines"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVISION HISTORY -->
+    <section class="revision" data-theme="light">
+      <div class="revision__head">
+        <div class="label mono"><span>( 07 )</span><span>改訂履歴 — Revision history</span></div>
+        <h2 class="section-title"><span class="reveal-line"><span data-i18n="rev.t1">Revision</span></span><span class="reveal-line"><span data-i18n="rev.t2"><em class="serif">history</em></span></span></h2>
+      </div>
+      <div class="rev-table" role="table" aria-label="Revision history">
+        <div class="rev-row rev-row--head mono" role="row"><span role="columnheader">Rev.</span><span role="columnheader">Date</span><span role="columnheader">Description</span><span role="columnheader">Appr.</span></div>
+        <div class="rev-row" role="row"><span class="rev-id">A</span><span class="mono">2021</span><span data-i18n="rev.a"></span><span class="rev-ok mono">✓</span></div>
+        <div class="rev-row" role="row"><span class="rev-id">B</span><span class="mono">2022.07</span><span data-i18n="rev.b"></span><span class="rev-ok mono">✓</span></div>
+        <div class="rev-row" role="row"><span class="rev-id">C</span><span class="mono">2022.09</span><span data-i18n="rev.c"></span><span class="rev-ok mono">✓</span></div>
+        <div class="rev-row" role="row"><span class="rev-id">D</span><span class="mono">2024</span><span data-i18n="rev.d"></span><span class="rev-ok mono">✓</span></div>
+        <div class="rev-row" role="row"><span class="rev-id">E</span><span class="mono">2025.02</span><span data-i18n="rev.e"></span><span class="rev-ok mono">✓</span></div>
+        <div class="rev-row rev-row--current" role="row"><span class="rev-id">F</span><span class="mono">2026</span><span data-i18n="rev.f"></span><span class="seal" aria-label="Approved"><span>佳</span></span></div>
+      </div>
+    </section>
+
+    <!-- CLIENTS MARQUEE -->
+    <section class="marquee" data-theme="light" aria-label="Clients">
+      <div class="marquee__row">
+        <div class="marquee__inner">
+          <span>Terra Arts</span><i>✦</i><span class="serif">BOTANIST</span><i>✦</i><span>Brother</span><i>✦</i><span class="serif">Kyn &amp; Folk</span><i>✦</i><span>Haconese</span><i>✦</i><span class="serif">TSJ</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGE -->
+    <section class="engage" data-theme="light">
+      <div class="engage__head">
+        <div class="label mono"><span>( 08 )</span><span>How to start</span></div>
+        <h2 class="section-title"><span class="reveal-line"><span data-i18n="engage.t1">Three ways</span></span><span class="reveal-line"><span data-i18n="engage.t2"><em class="serif">in</em></span></span></h2>
+      </div>
+      <ul class="engage__list">
+        <li><a href="#contact" class="engage__row"><span class="engage__key serif">A</span><h3 data-i18n="engage.a.t">Start small</h3><p data-i18n="engage.a.d"></p><span class="engage__note mono" data-i18n="engage.a.n"></span><span class="engage__arrow">→</span></a></li>
+        <li><a href="#contact" class="engage__row"><span class="engage__key serif">B</span><h3 data-i18n="engage.b.t">Build it</h3><p data-i18n="engage.b.d"></p><span class="engage__note mono" data-i18n="engage.b.n"></span><span class="engage__arrow">→</span></a></li>
+        <li><a href="#contact" class="engage__row"><span class="engage__key serif">C</span><h3 data-i18n="engage.c.t">Take it over</h3><p data-i18n="engage.c.d"></p><span class="engage__note mono" data-i18n="engage.c.n"></span><span class="engage__arrow">→</span></a></li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" data-theme="accent">
+      <div class="label mono"><span>( 09 )</span><span>Contact</span></div>
+      <h2 class="contact__title">
+        <span class="reveal-line"><span data-i18n="contact.t1">Have a project?</span></span>
+        <span class="reveal-line"><span data-i18n="contact.t2">Let’s build it <em class="serif">properly.</em></span></span>
+      </h2>
+      <div class="contact__row">
+        <a href="mailto:chenfangfang6b6@gmail.com" class="contact__mail" data-copy="chenfangfang6b6@gmail.com" data-hover-text>chenfangfang6b6@gmail.com</a>
+        <a href="mailto:chenfangfang6b6@gmail.com" class="contact__cta" data-magnetic data-cursor="Say hi"><span data-i18n="contact.cta">Start a<br>project</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </div>
+      <footer class="footer">
+        <div class="footer__cols mono">
+          <div><span>( Socials )</span><a href="https://x.com/chenfan10235083" target="_blank" rel="noopener" data-hover-text>X / Twitter</a><a href="https://github.com/576657922" target="_blank" rel="noopener" data-hover-text>GitHub</a></div>
+          <div><span>( Local time )</span><b data-clock>00:00:00</b> JST</div>
+          <div><span>( Edition )</span>KA1O-2026-001<br>Designed &amp; built by hand</div>
+          <div><a href="#top" class="totop" data-hover-text>Back to top ↑</a></div>
+        </div>
+        <div class="footer__giant" aria-hidden="true"><span data-split>ka1o</span><span class="serif" data-split>Tokyo</span></div>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.git
+node_modules
+dist
+assets-raw
+.DS_Store
+*.local
+README.md
