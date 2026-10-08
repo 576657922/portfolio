@@ -87,8 +87,8 @@ export const projects = [
     client: { en: 'Shanghai Orizon', ja: '上海オリゾン' },
     tagline: { en: 'Code, judged in seconds.', ja: '提出したコードを、数秒で判定。' },
     desc: {
-      en: 'An online judge for programming education — problem sets, live submissions and automated grading, built over more than three years in React and Spring Boot.',
-      ja: 'プログラミング教育向けのオンラインジャッジ。問題管理、提出、自動採点までを、ReactとSpring Bootで3年以上かけて開発。',
+      en: 'An online judge for programming education — problem sets, live submissions and automated grading, built over two years in React and Spring Boot.',
+      ja: 'プログラミング教育向けのオンラインジャッジ。問題管理、提出、自動採点までを、ReactとSpring Bootで2年以上かけて開発。',
     },
     challenge: {
       en: 'Every submission runs in isolation and needs a fast, trustworthy verdict — inside a codebase that many developers touch every week.',
@@ -102,7 +102,7 @@ export const projects = [
     stack: 'React · Spring Boot',
     role: { en: 'Full-stack engineer', ja: 'フルスタックエンジニア' },
     year: '2022 — 2024',
-    badge: 'Full-stack · 3+ yrs',
+    badge: 'Full-stack · 2+ yrs',
     img: '/images/arc-05.jpg', // TEMP
     gallery: ['/images/arc-02.jpg', '/images/arc-05.jpg', '/images/arc-08.jpg'], // TEMP
     size: 'xl',
