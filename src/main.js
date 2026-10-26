@@ -73,20 +73,24 @@ function renderArchive() {
   $('.archive__track').innerHTML =
     archive
       .map(
-        (a) => `
-    <figure class="arc" style="aspect-ratio:${a.ratio}">
-      <div class="arc__media"><img src="${a.img}" alt="${a.title}" loading="lazy" /></div>
-      <figcaption class="arc__cap mono"><span>${a.title}</span><span>${a.meta}</span></figcaption>
+        (a, i) => `
+    <figure class="arc${a.url ? ' arc--app' : ''}" style="aspect-ratio:${a.ratio}">
+      ${a.url ? `<a class="arc__media arc__link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-labelledby="arc-title-${i} arc-visit-${i}">` : '<div class="arc__media">'}
+        <img src="${L(a.img)}" data-l-src="archive.${i}.img" alt="${a.url ? '' : a.title}" loading="lazy" />
+        ${a.url ? `<span class="arc__visit"><span id="arc-visit-${i}" data-i18n="archive.visit"></span><span aria-hidden="true">↗</span></span>` : ''}
+      ${a.url ? '</a>' : '</div>'}
+      <figcaption class="arc__cap mono"><span id="arc-title-${i}" data-l="archive.${i}.title">${L(a.title)}</span><span data-l="archive.${i}.meta">${L(a.meta)}</span></figcaption>
     </figure>`
       )
       .join('') +
     `<div class="arc__end"><p data-i18n="archive.end"></p><a href="#contact" class="btn-round" data-magnetic><span>Collaborate</span></a></div>`;
+  $('.archive__total').textContent = String(archive.length).padStart(2, '0');
 }
 
 /* ------------------------------------------------------------------ */
 /* i18n                                                                */
 /* ------------------------------------------------------------------ */
-const sources = { projects, index };
+const sources = { projects, index, archive };
 const resolve = (path) => {
   const v = path.split('.').reduce((o, k) => (o == null ? o : o[k]), sources);
   return L(v);
@@ -97,6 +101,10 @@ function applyLang() {
   document.documentElement.lang = lang;
   $$('[data-i18n]').forEach((el) => (el.innerHTML = t(el.dataset.i18n)));
   $$('[data-l]').forEach((el) => (el.innerHTML = resolve(el.dataset.l)));
+  $$('[data-l-src]').forEach((el) => {
+    const src = resolve(el.dataset.lSrc);
+    if (el.getAttribute('src') !== src) el.setAttribute('src', src);
+  });
   $$('[data-lang-toggle]').forEach((b) => b.setAttribute('aria-label', lang === 'en' ? '日本語に切り替え' : 'Switch to English'));
 }
 
@@ -313,6 +321,8 @@ function initArchive() {
   });
 
   figs.forEach((f) => {
+    // Keep application screenshots fully visible while artwork uses parallax.
+    if (f.classList.contains('arc--app')) return;
     gsap.fromTo($('img', f), { scale: 1.3, xPercent: -6 }, {
       scale: 1, xPercent: 6, ease: 'none',
       scrollTrigger: { trigger: f, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true },

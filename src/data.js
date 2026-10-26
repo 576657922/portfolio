@@ -181,6 +181,13 @@ export const index = [
 ];
 
 export const archive = [
+  {
+    title: '回神 / Huishen',
+    meta: { en: 'Meditation PWA · 2026', ja: '瞑想 PWA · 2026' },
+    img: { en: '/images/work/huishen.jpg', ja: '/images/work/huishen-ja.jpg' },
+    ratio: '16/10',
+    url: 'https://huishen.chinnhouhou.com/',
+  },
   { title: 'Ink Study', meta: 'Shader · 2026', img: '/images/arc-01.jpg', ratio: '4/5' },
   { title: 'Tidal', meta: '3D Loop · 2025', img: '/images/arc-02.jpg', ratio: '1/1' },
   { title: 'Marble Noise', meta: 'GLSL · 2025', img: '/images/arc-03.jpg', ratio: '3/4' },

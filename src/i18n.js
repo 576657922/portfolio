@@ -18,6 +18,7 @@ export const dict = {
     'archive.t1': 'Experiments,',
     'archive.t2': '<em class="serif">studies</em> &amp; noise',
     'archive.end': 'Curiosity is<br>the <em class="serif">real</em> client.',
+    'archive.visit': 'Visit site',
 
     'about.t1': 'A developer who',
     'about.t2': '<em class="serif">thinks like a designer,</em>',
@@ -93,6 +94,7 @@ export const dict = {
     'archive.t1': '実験と、',
     'archive.t2': '<em class="serif">習作</em>とノイズ',
     'archive.end': '好奇心こそ、<br><em class="serif">本当の</em>クライアント。',
+    'archive.visit': 'サイトを見る',
 
     'about.t1': 'デザイナーの',
     'about.t2': '<em class="serif">目で考え、</em>',
