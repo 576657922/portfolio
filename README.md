@@ -40,11 +40,43 @@ npm run preview
 Static build served by nginx on Cloud Run (`portfolio` service, `asia-northeast1`, project `proposal-507409`).
 `chinnhouhou.com` and `www.chinnhouhou.com` are Cloud Run domain mappings pointing at this service.
 
+### Automatic deployment
+
+Every push to `main` in `576657922/portfolio` triggers Cloud Build
+(`portfolio-main-deploy`, region `asia-northeast1`). `cloudbuild.yaml` builds the
+Docker image, pushes it to Artifact Registry with the full Git commit SHA as its
+tag, and deploys it to the existing `portfolio` service. Other branches do not
+deploy. A failed build leaves the running revision in place.
+
 ```bash
-gcloud run deploy portfolio --source . --region asia-northeast1 \
+gcloud builds list --project proposal-507409 --region asia-northeast1 --limit=5
+gcloud builds log BUILD_ID --project proposal-507409 --region asia-northeast1
+```
+
+The trigger uses the existing `proposal-github` connection and build service
+account `903490316046-compute@developer.gserviceaccount.com`.
+
+### Manual deployment
+
+```bash
+gcloud run deploy portfolio --source . --project proposal-507409 --region asia-northeast1 \
   --allow-unauthenticated --port 8080 --cpu 1 --memory 512Mi \
   --min-instances 0 --max-instances 3
 ```
+
+### Rollback
+
+List previous revisions, then select the revision that should receive traffic:
+
+```bash
+gcloud run revisions list --service portfolio --project proposal-507409 --region asia-northeast1
+gcloud run services update-traffic portfolio --to-revisions=REVISION=100 \
+  --project proposal-507409 --region asia-northeast1
+```
+
+After a rollback pins traffic to a revision, use `gcloud run services update-traffic
+portfolio --to-latest --project proposal-507409 --region asia-northeast1` to resume
+routing traffic to new deployments.
 
 ## Placeholder content
 
